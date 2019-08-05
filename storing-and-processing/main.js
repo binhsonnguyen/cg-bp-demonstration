@@ -11,3 +11,7 @@ function concatFullName() {
     let fullName = firstName + " " + middleName + " " + lastName;
     document.getElementById("concat_value-full_name").value = fullName;
 }
+
+function calcPlus() {
+    
+}
