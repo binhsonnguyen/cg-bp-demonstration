@@ -18,3 +18,8 @@ function calcPlus() {
     let calculateResult = arg1 + arg2;
     document.getElementById("calculated").value = calculateResult;
 }
+
+function reuseCalculatedValue() {
+    let calculatedValue = document.getElementById("calculated").value;
+    document.getElementById("calculator-arg_1").value = calculatedValue;
+}
