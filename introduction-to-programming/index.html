@@ -5,14 +5,15 @@
     <title>Hello Javascript</title>
     <script>
         function action() {
-            alert('Action clicked!')
+            let inputValue = document.getElementById("input-value").value;
+            alert(inputValue);
         }
     </script>
 </head>
 <body>
 <label>
     Input some value:
-    <input type="text">
+    <input id="input-value" type="text">
 </label>
 <button onclick="action()">Action</button>
 </body>
