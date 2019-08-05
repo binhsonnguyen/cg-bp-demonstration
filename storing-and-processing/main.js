@@ -24,4 +24,5 @@ function reuseCalculatedValue() {
     document.getElementById("calculator-arg_1").value = calculatedValue;
     document.getElementById("calculator-arg_2").value = "";
     document.getElementById("calculated").value = "";
+    document.getElementById("calculator-arg_2").focus();
 }
