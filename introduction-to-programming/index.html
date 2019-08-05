@@ -7,7 +7,7 @@
         function action() {
             let inputValue = document.getElementById("input-value").value;
             let message = "You inputted \"" + inputValue + "\"!";
-            alert(message);
+            document.getElementById("feedback").innerText = message;
         }
     </script>
 </head>
@@ -17,5 +17,6 @@
     <input id="input-value" type="text">
 </label>
 <button onclick="action()">Action</button>
+<div id="feedback"></div>
 </body>
 </html>
