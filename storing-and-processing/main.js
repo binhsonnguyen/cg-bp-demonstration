@@ -3,3 +3,7 @@ function displayInputtedValue() {
     let message = "You inputted \"" + inputValue + "\"!";
     document.getElementById("feedback").innerText = message;
 }
+
+function concatFullName() {
+
+}
