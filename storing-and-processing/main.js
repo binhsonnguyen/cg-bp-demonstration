@@ -5,5 +5,9 @@ function displayInputtedValue() {
 }
 
 function concatFullName() {
-
+    let firstName = document.getElementById("concat_value-first_name").value;
+    let middleName = document.getElementById("concat_value-middle_name").value;
+    let lastName = document.getElementById("concat_value-last_name").value;
+    let fullName = firstName + middleName + lastName;
+    document.getElementById("concat_value-result").innerText = fullName;
 }
