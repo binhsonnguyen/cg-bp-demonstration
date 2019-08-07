@@ -9,5 +9,6 @@ if (!devMode) {
 alert("Welcome");
 
 function addTask() {
-
+    let task = prompt("Input your task");
+    console.log("Task inputted:", task);
 }
