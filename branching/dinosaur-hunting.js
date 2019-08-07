@@ -7,7 +7,7 @@ function onKeyDown(event) {
     let dinoElement = document.getElementById("dinosaurs");
     let dinoElementTopping = dinoElement.style.top;
     let top = parseInt(dinoElementTopping);
-    if (event.key === "ArrowDown") {
+    if (event.which === 40) {
         top += velocity;
     }
     dinoElement.style.top = top + "px";
