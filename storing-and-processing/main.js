@@ -27,8 +27,15 @@ function reuseCalculatedValue() {
     document.getElementById("calculator-arg_2").focus();
 }
 
-function switchChange() {
-    let switch1IsOn = document.getElementById("switch-1").checked;
-    let switch2IsOn = document.getElementById("switch-2").checked;
-    document.getElementById("lamp").checked = switch1IsOn && switch2IsOn;
+function serialSwitchChange() {
+    let switch1IsOn = document.getElementById("switch-a1").checked;
+    let switch2IsOn = document.getElementById("switch-a2").checked;
+    document.getElementById("lamp-a").checked = switch1IsOn && switch2IsOn;
+}
+
+function parallelSwitchChange() {
+    let switch1IsOn = document.getElementById("switch-b1").checked;
+    console.log("Switch 1", switch1IsOn ? "ON" : "OFF");
+    let switch2IsOn = document.getElementById('switch-b2').checked;
+    console.log("Switch 2", switch2IsOn ? "ON" : "OFF");
 }

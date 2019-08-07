@@ -108,7 +108,7 @@
                 -
                 <label>
                     Switch 1
-                    <input id="switch-1" oninput="switchChange()" type="checkbox">
+                    <input id="switch-a1" oninput="serialSwitchChange()" type="checkbox">
                 </label>
                 -
             </td>
@@ -116,7 +116,7 @@
                 -
                 <label>
                     Switch 2
-                    <input id="switch-2" oninput="switchChange()" type="checkbox">
+                    <input id="switch-a2" oninput="serialSwitchChange()" type="checkbox">
                 </label>
                 -
             </td>
@@ -124,8 +124,44 @@
                 -
                 <label>
                     Lamp
-                    <input disabled id="lamp" type="checkbox">
+                    <input disabled id="lamp-a" type="checkbox">
                 </label>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<fieldset>
+    <legend>Lamp Status</legend>
+    <table style="border: 1px solid">
+        <tr>
+            <td rowspan="2" style="border: 1px solid lightgray">
+                Energy -
+            </td>
+            <td style="border: 1px solid lightgray">
+                -
+                <label>
+                    Switch 1
+                    <input id="switch-b1" oninput="parallelSwitchChange()" type="checkbox">
+                </label>
+                -
+            </td>
+            <td rowspan="2" style="border: 1px solid lightgray">
+                -
+                <label>
+                    Lamp
+                    <input disabled id="lamp-b" type="checkbox">
+                </label>
+            </td>
+        </tr>
+        <tr>
+
+            <td style="border: 1px solid lightgray">
+                -
+                <label>
+                    Switch 2
+                    <input id="switch-b2" oninput="parallelSwitchChange()" type="checkbox">
+                </label>
+                -
             </td>
         </tr>
     </table>
