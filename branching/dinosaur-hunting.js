@@ -21,15 +21,27 @@ function onKeyDown(event) {
     switch (key) {
         case arrowLeftKeyCode:
             left -= velocity;
+            if (left < 0) {
+                left = 200;
+            }
             break;
         case arrowUpKeyCode:
             top -= velocity;
+            if (top < 0) {
+                top = 200;
+            }
             break;
         case arrowRightKeyCode:
             left += velocity;
+            if (left > 200) {
+                left = 0;
+            }
             break;
         case arrowDownKeyCode:
             top += velocity;
+            if (top > 200) {
+                top = 0;
+            }
             break;
     }
 
