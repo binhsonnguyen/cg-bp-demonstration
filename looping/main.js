@@ -16,3 +16,7 @@ function addTask() {
         tasksListDiv.innerHTML += taskListItemHtml;
     } while (confirm("Input another?"));
 }
+
+function draw() {
+
+}
