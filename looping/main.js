@@ -7,3 +7,7 @@ if (!devMode) {
 }
 
 alert("Welcome");
+
+function addTask() {
+
+}
