@@ -23,25 +23,25 @@ function onKeyDown(event) {
         case arrowLeftKeyCode:
             left -= velocity;
             if (left < 0) {
-                left = roomSide;
+                left += roomSide;
             }
             break;
         case arrowUpKeyCode:
             top -= velocity;
             if (top < 0) {
-                top = roomSide;
+                top += roomSide;
             }
             break;
         case arrowRightKeyCode:
             left += velocity;
             if (left > roomSide) {
-                left = 0;
+                left -= roomSide;
             }
             break;
         case arrowDownKeyCode:
             top += velocity;
             if (top > roomSide) {
-                top = 0;
+                top -= roomSide;
             }
             break;
     }
