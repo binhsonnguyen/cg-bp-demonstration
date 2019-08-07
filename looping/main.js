@@ -9,12 +9,10 @@ if (!devMode) {
 alert("Welcome");
 
 function addTask() {
-    let continuing;
     do {
         let taskSubject = prompt("Input your task");
         let tasksListDiv = document.getElementById("tasks-list");
         let taskListItemHtml = "<input type=\"checkbox\">" + taskSubject + "<br>";
         tasksListDiv.innerHTML += taskListItemHtml;
-        continuing = confirm("Input another?");
-    } while (continuing);
+    } while (confirm("Input another?"));
 }
