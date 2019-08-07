@@ -5,15 +5,12 @@
     <title>Dinosaur Hunting</title>
     <script src="dinosaur-hunting.js"></script>
 </head>
-<body>
+<body onload="window.addEventListener('keydown', onKeyDown)">
 <img alt="Dino"
      height="100"
      id="dinosaurs"
      src="dino.jpg"
      style="position: absolute;left:100px; top:70px;"
      width="100">
-<script>
-    window.addEventListener("keydown", onKeyDown);
-</script>
 </body>
 </html>
