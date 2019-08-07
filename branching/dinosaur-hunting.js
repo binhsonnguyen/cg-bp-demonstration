@@ -13,8 +13,7 @@ function onKeyDown(event) {
     let key = event.which;
     if (key === arrowUpKeyCode) {
         top -= velocity;
-    }
-    if (key === arrowDownKeyCode) {
+    } else if (key === arrowDownKeyCode) {
         top += velocity;
     }
 
