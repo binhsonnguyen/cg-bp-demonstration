@@ -26,3 +26,10 @@ function reuseCalculatedValue() {
     document.getElementById("calculated").value = "";
     document.getElementById("calculator-arg_2").focus();
 }
+
+function switchChange() {
+    let switch1IsOn = document.getElementById('switch-1').checked;
+    console.log("Switch 1", switch1IsOn ? "ON" : "OFF");
+    let switch2IsOn = document.getElementById('switch-2').checked;
+    console.log("Switch 2", switch2IsOn ? "ON" : "OFF");
+}
