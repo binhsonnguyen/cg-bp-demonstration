@@ -18,14 +18,19 @@ function onKeyDown(event) {
     let left = parseInt(dinoElementLeft);
 
     let key = event.which;
-    if (key === arrowLeftKeyCode) {
-        left -= velocity;
-    } else if (key === arrowUpKeyCode) {
-        top -= velocity;
-    } else if (key === arrowRightKeyCode) {
-        left += velocity;
-    } else if (key === arrowDownKeyCode) {
-        top += velocity;
+    switch (key) {
+        case arrowLeftKeyCode:
+            left -= velocity;
+            break;
+        case arrowUpKeyCode:
+            top -= velocity;
+            break;
+        case arrowRightKeyCode:
+            left += velocity;
+            break;
+        case arrowDownKeyCode:
+            top += velocity;
+            break;
     }
 
     dinoElement.style.top = top + "px";
