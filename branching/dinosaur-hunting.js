@@ -1,1 +1,3 @@
-console.log("Application works!");
+function onKeyDown() {
+    console.log("A key has been stroke!");
+}
