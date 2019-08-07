@@ -2,8 +2,8 @@ function registerKeyboardStrokeListener() {
     window.addEventListener("keydown", onKeyDown);
 }
 
-function onKeyDown() {
-    console.log("A key has been stroke!");
+function onKeyDown(event) {
+    console.log("Stroke event", event);
     const velocity = 5;
     let dinoElement = document.getElementById("dinosaurs");
     let dinoElementTopping = dinoElement.style.top;
