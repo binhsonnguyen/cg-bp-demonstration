@@ -35,7 +35,6 @@ function serialSwitchChange() {
 
 function parallelSwitchChange() {
     let switch1IsOn = document.getElementById("switch-b1").checked;
-    console.log("Switch 1", switch1IsOn ? "ON" : "OFF");
     let switch2IsOn = document.getElementById('switch-b2').checked;
-    console.log("Switch 2", switch2IsOn ? "ON" : "OFF");
+    document.getElementById("lamp-b").checked = switch1IsOn || switch2IsOn;
 }
