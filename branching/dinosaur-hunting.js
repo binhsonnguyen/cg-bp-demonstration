@@ -3,11 +3,12 @@ function registerKeyboardStrokeListener() {
 }
 
 function onKeyDown(event) {
-    console.log("Stroke event", event);
     const velocity = 5;
     let dinoElement = document.getElementById("dinosaurs");
     let dinoElementTopping = dinoElement.style.top;
     let top = parseInt(dinoElementTopping);
-    top += velocity;
+    if (event.key === "ArrowDown") {
+        top += velocity;
+    }
     dinoElement.style.top = top + "px";
 }
