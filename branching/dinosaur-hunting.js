@@ -7,5 +7,6 @@ function onKeyDown() {
     let dinoElement = document.getElementById("dinosaurs");
     let dinoElementTopping = dinoElement.style.top;
     let top = parseInt(dinoElementTopping);
-    console.log("top", top);
+    top += 5;
+    dinoElement.style.top = top + "px";
 }
