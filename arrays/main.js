@@ -1,5 +1,6 @@
 function generate() {
-    let numbers = new Array(5);
+    let size = +document.getElementById("length").value;
+    let numbers = new Array(size);
 
     for (let i = 0; i < numbers.length; i++) {
         numbers[i] = i + 1;
