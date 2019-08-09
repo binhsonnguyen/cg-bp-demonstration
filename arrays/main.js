@@ -110,4 +110,11 @@ function reverse() {
 }
 
 function removeOdds() {
+    for (let i = 0; i < numbers.length; i++) {
+        let number = numbers[i];
+        let isEven = number % 2 === 0;
+        if (isEven) {
+            console.log(number);
+        }
+    }
 }
