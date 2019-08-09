@@ -110,11 +110,39 @@ function reverse() {
 }
 
 function removeOdds() {
+    let evenNumbers = [];
     for (let i = 0; i < numbers.length; i++) {
         let number = numbers[i];
         let isEven = number % 2 === 0;
         if (isEven) {
-            console.log(number);
+            evenNumbers.push(number);
         }
     }
+
+    numbers = evenNumbers;
+
+    document.getElementById("numbers").innerText = "[" + numbers.join(", ") + "]";
+    document.getElementById("analysis-length").innerText = numbers.length;
+
+    let minIndex = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[minIndex] > numbers[i]) {
+            minIndex = i;
+        }
+    }
+    document.getElementById("analysis-min").innerText = numbers[minIndex] + "@" + minIndex;
+
+    let maxIndex = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[maxIndex] < numbers[i]) {
+            maxIndex = i;
+        }
+    }
+    document.getElementById("analysis-max").innerText = numbers[maxIndex] + "@" + maxIndex;
+
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    document.getElementById("analysis-sum").innerText = sum;
 }
