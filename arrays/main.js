@@ -1,4 +1,4 @@
-function generate() {
+function generateLinearly() {
     let size = +document.getElementById("length").value;
     let numbers = new Array(size);
 
