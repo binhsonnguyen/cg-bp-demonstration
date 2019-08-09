@@ -7,6 +7,7 @@ function generateLinearly() {
     }
 
     document.getElementById("numbers").innerText = "[" + numbers.join(", ") + "]";
+    document.getElementById("analysis-length").innerText = numbers.length;
 }
 
 function generateRandomly() {
@@ -24,4 +25,5 @@ function generateRandomly() {
     }
 
     document.getElementById("numbers").innerText = "[" + numbers.join(", ") + "]";
+    document.getElementById("analysis-length").innerText = numbers.length;
 }
