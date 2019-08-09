@@ -24,6 +24,12 @@ function generateLinearly() {
         }
     }
     document.getElementById("analysis-max").innerText = numbers[maxIndex] + "@" + maxIndex;
+
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    document.getElementById("analysis-sum").innerText = sum;
 }
 
 function generateRandomly() {
@@ -58,4 +64,10 @@ function generateRandomly() {
         }
     }
     document.getElementById("analysis-max").innerText = numbers[maxIndex] + "@" + maxIndex;
+
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    document.getElementById("analysis-sum").innerText = sum;
 }
