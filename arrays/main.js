@@ -71,3 +71,7 @@ function generateRandomly() {
     }
     document.getElementById("analysis-sum").innerText = sum;
 }
+
+function reverse() {
+    
+}
