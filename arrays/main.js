@@ -16,6 +16,14 @@ function generateLinearly() {
         }
     }
     document.getElementById("analysis-min").innerText = numbers[minIndex] + "@" + minIndex;
+
+    let maxIndex;
+    for (let i = 0; i < numbers.length; i++) {
+        if (maxIndex === undefined || numbers[maxIndex] < numbers[i]) {
+            maxIndex = i;
+        }
+    }
+    document.getElementById("analysis-max").innerText = numbers[maxIndex] + "@" + maxIndex;
 }
 
 function generateRandomly() {
@@ -42,4 +50,12 @@ function generateRandomly() {
         }
     }
     document.getElementById("analysis-min").innerText = numbers[minIndex] + "@" + minIndex;
+
+    let maxIndex;
+    for (let i = 0; i < numbers.length; i++) {
+        if (maxIndex === undefined || numbers[maxIndex] < numbers[i]) {
+            maxIndex = i;
+        }
+    }
+    document.getElementById("analysis-max").innerText = numbers[maxIndex] + "@" + maxIndex;
 }
