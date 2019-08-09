@@ -6,7 +6,9 @@ function generate() {
         numbers[i] = i + 1;
     }
 
+    let numbersView = "";
     for (let i = 0; i < numbers.length; i++) {
-        document.getElementById("numbers").innerText += numbers[i];
+        numbersView += numbers[i] + ", ";
     }
+    document.getElementById("numbers").innerText = numbersView;
 }
