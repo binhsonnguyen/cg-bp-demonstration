@@ -75,8 +75,10 @@ function generateRandomly() {
 }
 
 function reverse() {
+    let reversed = new Array(numbers.length);
     let lastIndex = numbers.length - 1;
     for (let i = 0; i < numbers.length; i++) {
-        console.log(numbers[lastIndex - i]);
+        reversed[i] = numbers[lastIndex - i];
     }
+    console.log(reversed);
 }
