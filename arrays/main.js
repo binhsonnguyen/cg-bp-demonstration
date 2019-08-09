@@ -11,10 +11,16 @@ function generateLinearly() {
 
 function generateRandomly() {
     let size = +document.getElementById("length").value;
+
+    let maximum = +document.getElementById("maximum").value;
+    if (!maximum) {
+        maximum = 100;
+    }
+
     let numbers = new Array(size);
 
     for (let i = 0; i < numbers.length; i++) {
-        numbers[i] = Math.round(Math.random() * 100);
+        numbers[i] = Math.round(Math.random() * maximum);
     }
 
     document.getElementById("numbers").innerText = "[" + numbers.join(", ") + "]";
