@@ -108,3 +108,6 @@ function reverse() {
     }
     document.getElementById("analysis-sum").innerText = sum;
 }
+
+function removeOdds() {
+}
