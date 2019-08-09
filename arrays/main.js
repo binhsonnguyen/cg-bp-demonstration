@@ -8,6 +8,14 @@ function generateLinearly() {
 
     document.getElementById("numbers").innerText = "[" + numbers.join(", ") + "]";
     document.getElementById("analysis-length").innerText = numbers.length;
+
+    let min;
+    for (let i = 0; i < numbers.length; i++) {
+        if (min === undefined || min > numbers[i]) {
+            min = numbers[i];
+        }
+    }
+    document.getElementById("analysis-min").innerText = min;
 }
 
 function generateRandomly() {
@@ -26,4 +34,12 @@ function generateRandomly() {
 
     document.getElementById("numbers").innerText = "[" + numbers.join(", ") + "]";
     document.getElementById("analysis-length").innerText = numbers.length;
+
+    let min;
+    for (let i = 0; i < numbers.length; i++) {
+        if (min === undefined || min > numbers[i]) {
+            min = numbers[i];
+        }
+    }
+    document.getElementById("analysis-min").innerText = min;
 }
