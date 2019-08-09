@@ -14,7 +14,7 @@ function generateRandomly() {
     let numbers = new Array(size);
 
     for (let i = 0; i < numbers.length; i++) {
-        numbers[i] = Math.random();
+        numbers[i] = Math.random() * 100;
     }
 
     document.getElementById("numbers").innerText = "[" + numbers.join(", ") + "]";
