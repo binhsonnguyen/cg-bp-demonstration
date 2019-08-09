@@ -6,5 +6,5 @@ function generate() {
         numbers[i] = i + 1;
     }
 
-    document.getElementById("numbers").innerText = numbers.join(", ");
+    document.getElementById("numbers").innerText = "[" + numbers.join(", ") + "]";
 }
