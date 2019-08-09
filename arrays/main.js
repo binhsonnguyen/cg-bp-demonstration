@@ -75,5 +75,8 @@ function generateRandomly() {
 }
 
 function reverse() {
-    
+    let lastIndex = numbers.length - 1;
+    for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[lastIndex - i]);
+    }
 }
