@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Javascript</title>
+    <script src="main.js"></script>
+</head>
+<body>
+<fieldset>
+    <legend>Input value</legend>
+    <label>
+        Input some value:
+        <input id="input-value" oninput="action()" type="text">
+    </label>
+    <hr>
+    <div id="feedback"></div>
+</fieldset>
+<fieldset>
+    <legend>Concat values</legend>
+    <table>
+        <tr>
+            <td>
+                <label for="concat_value-first_name">First Name</label>
+            </td>
+            <td>
+                <input id="concat_value-first_name" oninput="concatFullName()" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="concat_value-middle_name">Middle Name</label>
+            </td>
+            <td>
+                <input id="concat_value-middle_name" oninput="concatFullName()" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="concat_value-last_name">Last Name</label>
+            </td>
+            <td>
+                <input id="concat_value-last_name" oninput="concatFullName()" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="concat_value-full_name">Full Name</label>
+            </td>
+            <td>
+                <input disabled id="concat_value-full_name" type="text">
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<fieldset>
+    <legend>Calculator</legend>
+    <table>
+        <tr>
+            <td colspan="4">
+                <input id="calculator-arg_1" type="number">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input id="calculator-arg_2" type="number">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input disabled id="calculated" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="calcPlus()">+</button>
+            </td>
+            <td>
+                <button>-</button>
+            </td>
+            <td>
+                <button>*</button>
+            </td>
+            <td>
+                <button>/</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>^</button>
+            </td>
+            <td>
+                <button>%</button>
+            </td>
+            <td colspan="2">
+                <button onclick="reuseCalculatedValue()">Use</button>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<fieldset>
+    <legend>Lamp Status</legend>
+    <table style="border: 1px solid">
+        <tr>
+            <td style="border: 1px solid lightgray">
+                Energy -
+            </td>
+            <td style="border: 1px solid lightgray">
+                -
+                <label>
+                    Switch 1
+                    <input id="switch-a1" oninput="serialSwitchChange()" type="checkbox">
+                </label>
+                -
+            </td>
+            <td style="border: 1px solid lightgray">
+                -
+                <label>
+                    Switch 2
+                    <input id="switch-a2" oninput="serialSwitchChange()" type="checkbox">
+                </label>
+                -
+            </td>
+            <td style="border: 1px solid lightgray">
+                -
+                <label>
+                    Lamp
+                    <input disabled id="lamp-a" type="checkbox">
+                </label>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+<fieldset>
+    <legend>Lamp Status</legend>
+    <table style="border: 1px solid">
+        <tr>
+            <td rowspan="2" style="border: 1px solid lightgray">
+                Energy -
+            </td>
+            <td style="border: 1px solid lightgray">
+                -
+                <label>
+                    Switch 1
+                    <input id="switch-b1" oninput="parallelSwitchChange()" type="checkbox">
+                </label>
+                -
+            </td>
+            <td rowspan="2" style="border: 1px solid lightgray">
+                -
+                <label>
+                    Lamp
+                    <input disabled id="lamp-b" type="checkbox">
+                </label>
+            </td>
+        </tr>
+        <tr>
+
+            <td style="border: 1px solid lightgray">
+                -
+                <label>
+                    Switch 2
+                    <input id="switch-b2" oninput="parallelSwitchChange()" type="checkbox">
+                </label>
+                -
+            </td>
+        </tr>
+    </table>
+</fieldset>
+</body>
+</html>
