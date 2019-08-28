@@ -4,34 +4,10 @@
     <meta charset="UTF-8">
     <title>Reminders</title>
 </head>
-<body>
+<body onload="display()">
 <fieldset>
     <legend>Today</legend>
-    <table>
-        <tr>
-            <td>
-                <input type="checkbox">
-            </td>
-            <td>Show main display</td>
-        </tr>
-        <tr>
-            <td>
-                <input type="checkbox">
-            </td>
-            <td>Allow add</td>
-        </tr>
-        <tr>
-            <td>
-                <input type="checkbox">
-            </td>
-            <td>Allow delete</td>
-        </tr>
-        <tr>
-            <td>
-                <input type="checkbox">
-            </td>
-            <td>Hide done tasks</td>
-        </tr>
+    <table id="reminders-table">
     </table>
 </fieldset>
 <script src="main.js"></script>
