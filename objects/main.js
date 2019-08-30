@@ -73,10 +73,14 @@ function removeOne(id) {
     refreshDisplay();
 }
 
+function closeOne(id) {
+    console.log("closing reminder", `"${id}"`);
+}
+
 function renderReminder(reminder) {
     return `<tr>
     <td>
-        <input type='checkbox'>
+        <input oninput="closeOne(${reminder.id})" type='checkbox'>
     </td>
     <td>${reminder.subject}</td>
     <td>
