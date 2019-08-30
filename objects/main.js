@@ -7,6 +7,13 @@ const subjects = [
     "Hide done tasks",
 ];
 
+function addAndDisplay() {
+    let subject = document.getElementById("new-reminder").value;
+    console.log("adding reminder", `"${subject}"`);
+    document.getElementById("new-reminder").value = null;
+    console.log("done");
+}
+
 function displayAll() {
     for (let subject of subjects) {
         displayOne(subject);
