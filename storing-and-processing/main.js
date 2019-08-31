@@ -13,12 +13,8 @@ function concatFullName() {
 }
 
 function calcPlus() {
-    let arg1 = document.getElementById("calculator-arg_1").value;
-    arg1 = Number(arg1);
-
-    let arg2 = document.getElementById("calculator-arg_2").value;
-    arg2 = Number(arg2);
-
+    let arg1 = +document.getElementById("calculator-arg_1").value;
+    let arg2 = +document.getElementById("calculator-arg_2").value;
     let calculateResult = arg1 + arg2;
     document.getElementById("calculated").value = calculateResult;
 }
