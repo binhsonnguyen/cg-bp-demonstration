@@ -1,3 +1,6 @@
 while (true) {
-    prompt("Input PIN Code to unlock!");
+    let pinCode = prompt("Input PIN Code to unlock!");
+    if (pinCode === "1234") {
+        alert("Welcome");
+    }
 }
