@@ -9,6 +9,8 @@ if (!devMode) {
 alert("Welcome");
 
 function addTask() {
-    let task = prompt("Input your task");
-    console.log("Task inputted:", task);
+    let taskSubject = prompt("Input your task");
+    let tasksListDiv = document.getElementById("tasks-list");
+    let taskListItemHtml = "<input type=\"checkbox\">" + taskSubject + "<br>";
+    tasksListDiv.innerHTML += taskListItemHtml;
 }
