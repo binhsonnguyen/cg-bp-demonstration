@@ -18,5 +18,6 @@ function addTask() {
 }
 
 function draw() {
-
+    let canvas = document.getElementById("canvas");
+    canvas.innerText += "*";
 }
