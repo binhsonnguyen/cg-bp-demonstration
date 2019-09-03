@@ -24,5 +24,6 @@ function draw() {
         for (let lineIndex = 0; lineIndex < lineLength; lineIndex++) {
             canvas.innerText += "*";
         }
+        canvas.innerText += "<br/>";
     }
 }
