@@ -21,7 +21,7 @@ function draw() {
     let canvas = document.getElementById("canvas");
     let lineIndex = 0;
     let lineLength = +document.getElementById("width").value;
-    while (lineIndex++ < lineLength) {
+    for (; lineIndex++ < lineLength;) {
         canvas.innerText += "*";
     }
 }
