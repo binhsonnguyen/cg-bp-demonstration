@@ -20,7 +20,7 @@ function addTask() {
 function draw() {
     let canvas = document.getElementById("canvas");
     let lineLength = +document.getElementById("width").value;
-    for (let lineIndex = 0; lineIndex++ < lineLength;) {
+    for (let lineIndex = 0; lineIndex < lineLength; lineIndex++) {
         canvas.innerText += "*";
     }
 }
