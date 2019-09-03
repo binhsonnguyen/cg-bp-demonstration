@@ -22,7 +22,7 @@ function draw() {
     for (let rowIndex = 0; rowIndex < 5; rowIndex++) {
         let width = +document.getElementById("width").value;
         for (let colIndex = 0; colIndex < width; colIndex++) {
-            canvas.innerText += "*";
+            canvas.innerText += "* ";
         }
         canvas.innerHTML += "<br/>";
     }
