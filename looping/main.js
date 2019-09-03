@@ -19,5 +19,8 @@ function addTask() {
 
 function draw() {
     let canvas = document.getElementById("canvas");
-    canvas.innerText += "*";
+    let lineIndex = 0;
+    while (lineIndex++ < 10) {
+        canvas.innerText += "*";
+    }
 }
