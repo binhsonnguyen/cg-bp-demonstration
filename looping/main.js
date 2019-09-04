@@ -21,17 +21,18 @@ function draw() {
     let canvas = document.getElementById("canvas");
     canvas.innerHTML = "";
     let fill = document.getElementById("fill").checked;
+    let stroke = document.getElementById("stroke").value;
     let height = +document.getElementById("height").value;
     for (let rowIndex = 0; rowIndex < height; rowIndex++) {
         let width = +document.getElementById("width").value;
         for (let colIndex = 0; colIndex < width; colIndex++) {
             let dotView;
             if (fill) {
-                dotView = "* ";
+                dotView = stroke + " ";
             } else {
                 let isOnBorder = rowIndex === 0 || rowIndex === height - 1
                     || colIndex === 0 || colIndex === width - 1;
-                dotView = isOnBorder ? "* " : "  ";
+                dotView = isOnBorder ? stroke + " " : "  ";
             }
             canvas.innerText += dotView;
         }
