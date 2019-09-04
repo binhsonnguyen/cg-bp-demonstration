@@ -25,8 +25,9 @@ function draw() {
         let width = +document.getElementById("width").value;
         for (let colIndex = 0; colIndex < width; colIndex++) {
             let dotView;
-            if (rowIndex === 0 || rowIndex === height - 1
-                || colIndex === 0 || colIndex === width - 1) {
+            let isOnBorder = rowIndex === 0 || rowIndex === height - 1
+                || colIndex === 0 || colIndex === width - 1;
+            if (isOnBorder) {
                 dotView = "* ";
             } else {
                 dotView = "  ";
