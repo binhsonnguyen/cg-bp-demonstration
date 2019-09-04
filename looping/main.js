@@ -20,14 +20,19 @@ function addTask() {
 function draw() {
     let canvas = document.getElementById("canvas");
     canvas.innerHTML = "";
+    let fill = document.getElementById("fill").checked;
     let height = +document.getElementById("height").value;
     for (let rowIndex = 0; rowIndex < height; rowIndex++) {
         let width = +document.getElementById("width").value;
         for (let colIndex = 0; colIndex < width; colIndex++) {
             let dotView;
-            let isOnBorder = rowIndex === 0 || rowIndex === height - 1
-                || colIndex === 0 || colIndex === width - 1;
-            dotView = isOnBorder ? "* " : "  ";
+            if (fill) {
+                dotView = "* ";
+            } else {
+                let isOnBorder = rowIndex === 0 || rowIndex === height - 1
+                    || colIndex === 0 || colIndex === width - 1;
+                dotView = isOnBorder ? "* " : "  ";
+            }
             canvas.innerText += dotView;
         }
         canvas.innerHTML += "<br/>";
