@@ -27,11 +27,7 @@ function draw() {
             let dotView;
             let isOnBorder = rowIndex === 0 || rowIndex === height - 1
                 || colIndex === 0 || colIndex === width - 1;
-            if (isOnBorder) {
-                dotView = "* ";
-            } else {
-                dotView = "  ";
-            }
+            dotView = isOnBorder ? "* " : "  ";
             canvas.innerText += dotView;
         }
         canvas.innerHTML += "<br/>";
