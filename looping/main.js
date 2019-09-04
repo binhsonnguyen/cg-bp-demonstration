@@ -24,7 +24,14 @@ function draw() {
     for (let rowIndex = 0; rowIndex < height; rowIndex++) {
         let width = +document.getElementById("width").value;
         for (let colIndex = 0; colIndex < width; colIndex++) {
-            canvas.innerText += "* ";
+            let dotView;
+            if (rowIndex === 0 || rowIndex === height - 1
+                || colIndex === 0 || colIndex === width - 1) {
+                dotView = "* ";
+            } else {
+                dotView = "  ";
+            }
+            canvas.innerText += dotView;
         }
         canvas.innerHTML += "<br/>";
     }
