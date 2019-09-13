@@ -1,26 +1,26 @@
 function displayInputtedValue() {
-    let inputValue = document.getElementById("input-value").value;
+    let inputValue = getInputValue("input-value");
     let message = "You inputted \"" + inputValue + "\"!";
     document.getElementById("feedback").innerText = message;
 }
 
 function concatFullName() {
-    let firstName = document.getElementById("concat_value-first_name").value;
-    let middleName = document.getElementById("concat_value-middle_name").value;
-    let lastName = document.getElementById("concat_value-last_name").value;
+    let firstName = getInputValue("concat_value-first_name");
+    let middleName = getInputValue("concat_value-middle_name");
+    let lastName = getInputValue("concat_value-last_name");
     let fullName = firstName + " " + middleName + " " + lastName;
     document.getElementById("concat_value-full_name").value = fullName;
 }
 
 function calcPlus() {
-    let arg1 = +document.getElementById("calculator-arg_1").value;
-    let arg2 = +document.getElementById("calculator-arg_2").value;
+    let arg1 = +getInputValue("calculator-arg_1");
+    let arg2 = +getInputValue("calculator-arg_2");
     let calculateResult = arg1 + arg2;
     document.getElementById("calculated").value = calculateResult;
 }
 
 function reuseCalculatedValue() {
-    let calculatedValue = document.getElementById("calculated").value;
+    let calculatedValue = getInputValue("calculated");
     document.getElementById("calculator-arg_1").value = calculatedValue;
     document.getElementById("calculator-arg_2").value = "";
     document.getElementById("calculated").value = "";
@@ -37,4 +37,8 @@ function parallelSwitchChange() {
     let switch1IsOn = document.getElementById("switch-b1").checked;
     let switch2IsOn = document.getElementById('switch-b2').checked;
     document.getElementById("lamp-b").checked = switch1IsOn || switch2IsOn;
+}
+
+function getInputValue(id) {
+    return document.getElementById(id).value;
 }
