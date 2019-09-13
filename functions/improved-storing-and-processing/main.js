@@ -1,7 +1,7 @@
 function displayInputtedValue() {
     let inputValue = getInputValue("input-value");
     let message = "You inputted \"" + inputValue + "\"!";
-    document.getElementById("feedback").innerText = message;
+    getElement("feedback").innerText = message;
 }
 
 function concatFullName() {
@@ -24,19 +24,19 @@ function reuseCalculatedValue() {
     setInputValue("calculator-arg_1", calculatedValue);
     setInputValue("calculator-arg_2", "");
     setInputValue("calculated", "");
-    document.getElementById("calculator-arg_2").focus();
+    getElement("calculator-arg_2").focus();
 }
 
 function serialSwitchChange() {
     let switch1IsOn = isCheckBoxChecked("switch-a1");
     let switch2IsOn = isCheckBoxChecked("switch-a2");
-    document.getElementById("lamp-a").checked = switch1IsOn && switch2IsOn;
+    getElement("lamp-a").checked = switch1IsOn && switch2IsOn;
 }
 
 function parallelSwitchChange() {
     let switch1IsOn = isCheckBoxChecked("switch-b1");
     let switch2IsOn = isCheckBoxChecked('switch-b2');
-    document.getElementById("lamp-b").checked = switch1IsOn || switch2IsOn;
+    getElement("lamp-b").checked = switch1IsOn || switch2IsOn;
 }
 
 function getInputValue(id) {
@@ -44,7 +44,7 @@ function getInputValue(id) {
 }
 
 function setInputValue(id, value) {
-    document.getElementById(id).value = value;
+    getElement(id).value = value;
 }
 
 function isCheckBoxChecked(id) {
@@ -52,5 +52,9 @@ function isCheckBoxChecked(id) {
 }
 
 function getElementAttribute(id, attr) {
-    return document.getElementById(id)[attr]
+    return getElement(id)[attr]
+}
+
+function getElement(id) {
+    return document.getElementById(id);
 }
