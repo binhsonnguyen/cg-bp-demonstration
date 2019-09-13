@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Awesome Toolbox</title>
+    <script src="main.js"></script>
+</head>
+<body>
+<fieldset>
+    <legend>Tasks list</legend>
+    <div id="tasks-list"></div>
+    <hr>
+    <button onclick="addTask()">Add</button>
+</fieldset>
+<fieldset>
+    <legend>Draws</legend>
+    <pre id="canvas"></pre>
+    <hr>
+    <table>
+        <tr>
+            <td>Artifact</td>
+            <td>
+                <select id="artifact">
+                    <option>Line</option>
+                    <option>Triangle</option>
+                    <option>Rectangle</option>
+                    <option>Hexagonal</option>
+                    <option>Eclipse</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Width</td>
+            <td>
+                <input id="width" type="text" value="10">
+            </td>
+        </tr>
+        <tr>
+            <td>Width</td>
+            <td>
+                <input id="height" type="text" value="5">
+            </td>
+        </tr>
+        <tr>
+            <td>Fill</td>
+            <td>
+                <input checked id="fill" type="checkbox">
+            </td>
+        </tr>
+        <tr>
+            <td>Stroke</td>
+            <td>
+                <select id="stroke">
+                    <option>*</option>
+                    <option>+</option>
+                    <option>.</option>
+                    <option>$</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <button onclick="draw()">Draw</button>
+</fieldset>
+</body>
+</html>
