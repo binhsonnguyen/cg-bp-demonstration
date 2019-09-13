@@ -40,9 +40,13 @@ function parallelSwitchChange() {
 }
 
 function getInputValue(id) {
-    return document.getElementById(id).value;
+    return getElementAttribute(id, "value");
 }
 
 function isCheckBoxChecked(id) {
-    return document.getElementById(id).checked;
+    return getElementAttribute(id, "checked");
+}
+
+function getElementAttribute(id, attr) {
+    return document.getElementById(id)[attr]
 }
