@@ -9,21 +9,21 @@ function concatFullName() {
     let middleName = getInputValue("concat_value-middle_name");
     let lastName = getInputValue("concat_value-last_name");
     let fullName = firstName + " " + middleName + " " + lastName;
-    document.getElementById("concat_value-full_name").value = fullName;
+    setInputValue("concat_value-full_name", fullName);
 }
 
 function calcPlus() {
     let arg1 = +getInputValue("calculator-arg_1");
     let arg2 = +getInputValue("calculator-arg_2");
     let calculateResult = arg1 + arg2;
-    document.getElementById("calculated").value = calculateResult;
+    setInputValue("calculated", calculateResult);
 }
 
 function reuseCalculatedValue() {
     let calculatedValue = getInputValue("calculated");
-    document.getElementById("calculator-arg_1").value = calculatedValue;
-    document.getElementById("calculator-arg_2").value = "";
-    document.getElementById("calculated").value = "";
+    setInputValue("calculator-arg_1", calculatedValue);
+    setInputValue("calculator-arg_2", "");
+    setInputValue("calculated", "");
     document.getElementById("calculator-arg_2").focus();
 }
 
@@ -41,6 +41,10 @@ function parallelSwitchChange() {
 
 function getInputValue(id) {
     return getElementAttribute(id, "value");
+}
+
+function setInputValue(id, value) {
+    document.getElementById(id).value = value;
 }
 
 function isCheckBoxChecked(id) {
