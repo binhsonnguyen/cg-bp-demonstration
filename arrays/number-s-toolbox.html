@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers toolbox</title>
+    <script src="main.js"></script>
+</head>
+<body>
+<fieldset>
+    <legend>Numbers generator</legend>
+    <table>
+        <tr>
+            <td>Length</td>
+            <td>
+                <input id="length" type="number" value="10">
+            </td>
+        </tr>
+        <tr>
+            <td>Maximum</td>
+            <td>
+                <input id="maximum" type="number" value="100">
+            </td>
+        </tr>
+    </table>
+    <button onclick="generateLinearly()">Linear</button>
+    <button onclick="generateRandomly()">Random</button>
+    <button onclick="reverse()">Reverse</button>
+    <button onclick="removeOdds()">Remove Odds</button>
+    <button onclick="removeEvens()">Remove Evens</button>
+    <hr>
+    <code id="numbers"></code>
+</fieldset>
+<fieldset>
+    <legend>Analysis</legend>
+    <table>
+        <tr>
+            <td><code style="color: blue">Size</code></td>
+            <td><code id="analysis-length" style="color: red"></code></td>
+        </tr>
+        <tr>
+            <td><code style="color: blue">Min</code></td>
+            <td><code id="analysis-min" style="color: red"></code></td>
+        </tr>
+        <tr>
+            <td><code style="color: blue">Max</code></td>
+            <td><code id="analysis-max" style="color: red"></code></td>
+        </tr>
+        <tr>
+            <td><code style="color: blue">Sum</code></td>
+            <td><code id="analysis-sum" style="color: red"></code></td>
+        </tr>
+    </table>
+</fieldset>
+</body>
+</html>
