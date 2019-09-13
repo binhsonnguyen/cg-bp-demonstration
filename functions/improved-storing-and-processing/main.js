@@ -28,17 +28,21 @@ function reuseCalculatedValue() {
 }
 
 function serialSwitchChange() {
-    let switch1IsOn = document.getElementById("switch-a1").checked;
-    let switch2IsOn = document.getElementById("switch-a2").checked;
+    let switch1IsOn = isCheckBoxChecked("switch-a1");
+    let switch2IsOn = isCheckBoxChecked("switch-a2");
     document.getElementById("lamp-a").checked = switch1IsOn && switch2IsOn;
 }
 
 function parallelSwitchChange() {
-    let switch1IsOn = document.getElementById("switch-b1").checked;
-    let switch2IsOn = document.getElementById('switch-b2').checked;
+    let switch1IsOn = isCheckBoxChecked("switch-b1");
+    let switch2IsOn = isCheckBoxChecked('switch-b2');
     document.getElementById("lamp-b").checked = switch1IsOn || switch2IsOn;
 }
 
 function getInputValue(id) {
     return document.getElementById(id).value;
+}
+
+function isCheckBoxChecked(id) {
+    return document.getElementById(id).checked;
 }
