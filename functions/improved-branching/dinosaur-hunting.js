@@ -18,10 +18,7 @@ function onKeyDown(event) {
     let key = event.which;
     switch (key) {
         case arrowLeftKeyCode:
-            left -= velocity;
-            if (left < 0) {
-                left += roomSide;
-            }
+            left = reduce(left);
             break;
         case arrowUpKeyCode:
             top -= velocity;
@@ -53,4 +50,12 @@ function getTop() {
 
 function getLeft() {
     return parseInt(dinoElement.style.left);
+}
+
+function reduce(position) {
+    position -= velocity;
+    if (position < 0) {
+        position += roomSide;
+    }
+    return position;
 }
