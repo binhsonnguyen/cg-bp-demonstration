@@ -42,11 +42,18 @@ function displayOne(subject) {
     remindersTable.innerHTML += renderReminder(subject);
 }
 
+function removeOne() {
+    console.log("removing reminder");
+}
+
 function renderReminder(subject) {
     return `<tr>
     <td>
         <input type='checkbox'>
     </td>
     <td>${subject}</td>
+    <td>
+        <button onclick="removeOne()">Cancel</button>
+    </td>
 </tr>`;
 }
