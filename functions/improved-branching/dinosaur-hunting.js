@@ -2,16 +2,16 @@ const dinoElement = document.getElementById("dinosaurs");
 const velocity = 5;
 const roomSide = 200;
 
+const arrowLeftKeyCode = 37;
+const arrowUpKeyCode = 38;
+const arrowRightKeyCode = 39;
+const arrowDownKeyCode = 40;
+
 function registerKeyboardStrokeListener() {
     window.addEventListener("keydown", onKeyDown);
 }
 
 function onKeyDown(event) {
-    const arrowLeftKeyCode = 37;
-    const arrowUpKeyCode = 38;
-    const arrowRightKeyCode = 39;
-    const arrowDownKeyCode = 40;
-
     let key = event.which;
     switch (key) {
         case arrowLeftKeyCode:
