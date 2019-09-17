@@ -10,11 +10,11 @@ const subjects = [
 function addAndDisplay() {
     let subject = document.getElementById("new-reminder").value;
     subjects.push(subject);
-    displayAll();
+    refresh();
     document.getElementById("new-reminder").value = null;
 }
 
-function displayAll() {
+function refresh() {
     remindersTable.innerHTML = null;
     for (let subject of subjects) {
         displayOne(subject);
