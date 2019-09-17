@@ -37,28 +37,28 @@ function getLeft() {
     return parseInt(dinoElement.style.left);
 }
 
-function moveLeft() {
-    let left = getLeft();
-    left = reduce(left);
+function setLeft(left) {
     dinoElement.style.left = left + "px";
+}
+
+function setTop(top) {
+    dinoElement.style.top = top + "px";
+}
+
+function moveLeft() {
+    setLeft(reduce(getLeft()));
 }
 
 function moveRight() {
-    let left = getLeft();
-    left = increase(left);
-    dinoElement.style.left = left + "px";
+    setLeft(increase(getLeft()))
 }
 
 function moveUp() {
-    let top = getTop();
-    top = reduce(top);
-    dinoElement.style.top = top + "px";
+    setTop(reduce(getTop()));
 }
 
 function moveDown() {
-    let top = getTop();
-    top = increase(top);
-    dinoElement.style.top = top + "px";
+    setTop(increase(getTop()));
 }
 
 function reduce(position) {
