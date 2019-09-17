@@ -6,7 +6,10 @@ const dataSource = {
         "Allow add",
         "Allow delete",
         "Hide done tasks",
-    ]
+    ],
+    add: function (subject) {
+        this.subjects.push(subject);
+    }
 };
 
 function addAndDisplay() {
@@ -24,7 +27,7 @@ function refreshDisplay() {
 
 function addInputtingSubjectToDataSource() {
     let subject = document.getElementById("new-reminder").value;
-    dataSource.subjects.push(subject);
+    dataSource.add(subject);
 }
 
 function emptyTableView() {
