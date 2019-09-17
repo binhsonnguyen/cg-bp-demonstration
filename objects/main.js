@@ -7,7 +7,7 @@ const subjects = [
     "Hide done tasks",
 ];
 
-function display() {
+function displayAll() {
     for (let subject of subjects) {
         remindersTable.innerHTML += renderReminder(subject);
     }
