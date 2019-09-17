@@ -1,9 +1,16 @@
 const remindersTable = document.getElementById("reminders-table");
-const reminderSubject = "Show main display";
+
+const subjects = [
+    "Show main display",
+    "Allow add",
+    "Allow delete",
+    "Hide done tasks",
+];
 
 function display() {
-    let reminderElementView = renderReminder(reminderSubject);
-    remindersTable.innerHTML += reminderElementView;
+    for (let subject of subjects) {
+        remindersTable.innerHTML += renderReminder(subject);
+    }
 }
 
 function renderReminder(subject) {
