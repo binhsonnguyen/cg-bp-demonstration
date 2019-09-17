@@ -21,10 +21,7 @@ function onKeyDown(event) {
             left = reduce(left);
             break;
         case arrowUpKeyCode:
-            top -= velocity;
-            if (top < 0) {
-                top += roomSide;
-            }
+            top = reduce(top);
             break;
         case arrowRightKeyCode:
             left += velocity;
