@@ -13,8 +13,8 @@ function concatFullName() {
 }
 
 function calcPlus() {
-    let arg1 = +getInputValue("calculator-arg_1");
-    let arg2 = +getInputValue("calculator-arg_2");
+    let arg1 = getInputValue("calculator-arg_1");
+    let arg2 = getInputValue("calculator-arg_2");
     let calculateResult = arg1 + arg2;
     setInputValue("calculated", calculateResult);
 }
@@ -40,7 +40,9 @@ function parallelSwitchChange() {
 }
 
 function getInputValue(id) {
-    return getElementAttribute(id, "value");
+    let value = getElementAttribute(id, "value");
+    let isNumberInput = getElementAttribute(id, "type") === "number";
+    return isNumberInput ? +value : value;
 }
 
 function setInputValue(id, value) {
