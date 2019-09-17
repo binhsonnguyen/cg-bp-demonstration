@@ -15,6 +15,7 @@ function addAndDisplay() {
 }
 
 function displayAll() {
+    remindersTable.innerHTML = null;
     for (let subject of subjects) {
         displayOne(subject);
     }
