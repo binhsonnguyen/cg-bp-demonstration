@@ -8,17 +8,29 @@ const subjects = [
 ];
 
 function addAndDisplay() {
-    let subject = document.getElementById("new-reminder").value;
-    subjects.push(subject);
+    addInputtingSubjectToDataSource();
     refreshDisplay();
-    document.getElementById("new-reminder").value = null;
+    emptyReminderInput();
 }
 
 function refreshDisplay() {
-    remindersTable.innerHTML = null;
+    emptyTableView();
     for (let subject of subjects) {
         displayOne(subject);
     }
+}
+
+function addInputtingSubjectToDataSource() {
+    let subject = document.getElementById("new-reminder").value;
+    subjects.push(subject);
+}
+
+function emptyTableView() {
+    remindersTable.innerHTML = null;
+}
+
+function emptyReminderInput() {
+    document.getElementById("new-reminder").value = null;
 }
 
 function displayOne(subject) {
