@@ -1,11 +1,13 @@
 const remindersTable = document.getElementById("reminders-table");
 
-const subjects = [
-    "Show main display",
-    "Allow add",
-    "Allow delete",
-    "Hide done tasks",
-];
+const dataSource = {
+    subjects: [
+        "Show main display",
+        "Allow add",
+        "Allow delete",
+        "Hide done tasks",
+    ]
+};
 
 function addAndDisplay() {
     addInputtingSubjectToDataSource();
@@ -15,14 +17,14 @@ function addAndDisplay() {
 
 function refreshDisplay() {
     emptyTableView();
-    for (let subject of subjects) {
+    for (let subject of dataSource.subjects) {
         displayOne(subject);
     }
 }
 
 function addInputtingSubjectToDataSource() {
     let subject = document.getElementById("new-reminder").value;
-    subjects.push(subject);
+    dataSource.subjects.push(subject);
 }
 
 function emptyTableView() {
