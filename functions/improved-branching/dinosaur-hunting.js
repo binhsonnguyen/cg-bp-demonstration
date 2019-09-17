@@ -12,8 +12,7 @@ function onKeyDown(event) {
 
     let dinoElement = document.getElementById("dinosaurs");
 
-    let dinoElementTopping = dinoElement.style.top;
-    let top = parseInt(dinoElementTopping);
+    let top = getTop();
 
     let dinoElementLeft = dinoElement.style.left;
     let left = parseInt(dinoElementLeft);
@@ -48,4 +47,9 @@ function onKeyDown(event) {
 
     dinoElement.style.top = top + "px";
     dinoElement.style.left = left + "px";
+}
+
+function getTop() {
+    let dinoElementTopping = dinoElement.style.top;
+    let top = parseInt(dinoElementTopping);
 }
