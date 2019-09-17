@@ -50,6 +50,5 @@ function onKeyDown(event) {
 }
 
 function getTop() {
-    let dinoElementTopping = dinoElement.style.top;
-    let top = parseInt(dinoElementTopping);
+    return parseInt(dinoElement.style.top);
 }
