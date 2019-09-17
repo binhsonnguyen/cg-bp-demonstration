@@ -23,6 +23,7 @@ function onKeyDown(event) {
             top = reduce(top);
             break;
         case arrowRightKeyCode:
+            moveRight();
             break;
         case arrowDownKeyCode:
             top = increase(top);
@@ -43,6 +44,12 @@ function getLeft() {
 function moveLeft() {
     let left = getLeft();
     left = reduce(left);
+    dinoElement.style.left = left + "px";
+}
+
+function moveRight() {
+    let left = getLeft();
+    left = increase(left);
     dinoElement.style.left = left + "px";
 }
 
