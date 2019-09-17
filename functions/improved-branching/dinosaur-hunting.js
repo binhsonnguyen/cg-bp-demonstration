@@ -1,12 +1,12 @@
 const dinoElement = document.getElementById("dinosaurs");
+const velocity = 5;
+const roomSide = 200;
 
 function registerKeyboardStrokeListener() {
     window.addEventListener("keydown", onKeyDown);
 }
 
 function onKeyDown(event) {
-    const velocity = 5;
-    const roomSide = 200;
     const arrowLeftKeyCode = 37;
     const arrowUpKeyCode = 38;
     const arrowRightKeyCode = 39;
