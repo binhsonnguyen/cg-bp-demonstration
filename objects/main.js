@@ -9,9 +9,9 @@ const subjects = [
 
 function addAndDisplay() {
     let subject = document.getElementById("new-reminder").value;
-    console.log("adding reminder", `"${subject}"`);
+    subjects.push(subject);
+    displayAll();
     document.getElementById("new-reminder").value = null;
-    console.log("done");
 }
 
 function displayAll() {
