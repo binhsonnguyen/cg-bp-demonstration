@@ -24,16 +24,10 @@ function onKeyDown(event) {
             top = reduce(top);
             break;
         case arrowRightKeyCode:
-            left += velocity;
-            if (left > roomSide) {
-                left -= roomSide;
-            }
+            left = increase(left);
             break;
         case arrowDownKeyCode:
-            top += velocity;
-            if (top > roomSide) {
-                top -= roomSide;
-            }
+            top = increase(top);
             break;
     }
 
@@ -53,6 +47,14 @@ function reduce(position) {
     position -= velocity;
     if (position < 0) {
         position += roomSide;
+    }
+    return position;
+}
+
+function increase(position) {
+    position += velocity;
+    if (position > roomSide) {
+        position -= roomSide;
     }
     return position;
 }
