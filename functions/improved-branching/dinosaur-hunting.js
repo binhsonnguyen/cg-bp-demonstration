@@ -1,3 +1,5 @@
+const dinoElement = document.getElementById("dinosaurs");
+
 function registerKeyboardStrokeListener() {
     window.addEventListener("keydown", onKeyDown);
 }
@@ -9,8 +11,6 @@ function onKeyDown(event) {
     const arrowUpKeyCode = 38;
     const arrowRightKeyCode = 39;
     const arrowDownKeyCode = 40;
-
-    let dinoElement = document.getElementById("dinosaurs");
 
     let top = getTop();
 
