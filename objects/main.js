@@ -9,8 +9,12 @@ const subjects = [
 
 function displayAll() {
     for (let subject of subjects) {
-        remindersTable.innerHTML += renderReminder(subject);
+        displayOne(subject);
     }
+}
+
+function displayOne(subject) {
+    remindersTable.innerHTML += renderReminder(subject);
 }
 
 function renderReminder(subject) {
