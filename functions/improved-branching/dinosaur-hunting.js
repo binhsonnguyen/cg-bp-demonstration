@@ -12,25 +12,21 @@ function onKeyDown(event) {
     const arrowRightKeyCode = 39;
     const arrowDownKeyCode = 40;
 
-    let top = getTop();
-
     let key = event.which;
     switch (key) {
         case arrowLeftKeyCode:
             moveLeft();
             break;
         case arrowUpKeyCode:
-            top = reduce(top);
+            moveUp();
             break;
         case arrowRightKeyCode:
             moveRight();
             break;
         case arrowDownKeyCode:
-            top = increase(top);
+            moveDown();
             break;
     }
-
-    dinoElement.style.top = top + "px";
 }
 
 function getTop() {
@@ -51,6 +47,18 @@ function moveRight() {
     let left = getLeft();
     left = increase(left);
     dinoElement.style.left = left + "px";
+}
+
+function moveUp() {
+    let top = getTop();
+    top = reduce(top);
+    dinoElement.style.top = top + "px";
+}
+
+function moveDown() {
+    let top = getTop();
+    top = increase(top);
+    dinoElement.style.top = top + "px";
 }
 
 function reduce(position) {
