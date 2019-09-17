@@ -13,9 +13,7 @@ function onKeyDown(event) {
     const arrowDownKeyCode = 40;
 
     let top = getTop();
-
-    let dinoElementLeft = dinoElement.style.left;
-    let left = parseInt(dinoElementLeft);
+    let left = getLeft();
 
     let key = event.which;
     switch (key) {
@@ -51,4 +49,8 @@ function onKeyDown(event) {
 
 function getTop() {
     return parseInt(dinoElement.style.top);
+}
+
+function getLeft() {
+    return parseInt(dinoElement.style.left);
 }
