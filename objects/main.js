@@ -1,6 +1,7 @@
+const remindersTable = document.getElementById("reminders-table");
+const reminderSubject = "Show main display";
+
 function display() {
-    let remindersTable = document.getElementById("reminders-table");
-    let reminderSubject = "Show main display";
     let reminderElementView = renderReminder(reminderSubject);
     remindersTable.innerHTML += reminderElementView;
 }
