@@ -18,12 +18,10 @@ function displayOne(subject) {
 }
 
 function renderReminder(subject) {
-    let reminderElementView =
-        "<tr>" +
-        "    <td>" +
-        "        <input type='checkbox'>" +
-        "    </td>" +
-        "    <td>" + subject + "</td>" +
-        "</tr>";
-    return reminderElementView;
+    return `<tr>
+    <td>
+        <input type='checkbox'>
+    </td>
+    <td>${subject}</td>
+</tr>`;
 }
