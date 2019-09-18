@@ -3,11 +3,23 @@ const remindersTable = document.getElementById("reminders-table");
 let incrementId = 0;
 
 const dataSource = {
-    subjects: [
-        "Show main display",
-        "Allow add",
-        "Allow delete",
-        "Hide done tasks",
+    reminders: [
+        {
+            id: incrementId++,
+            subject: "Show main display"
+        },
+        {
+            id: incrementId++,
+            subject: "Allow add"
+        },
+        {
+            id: incrementId++,
+            subject: "Allow delete"
+        },
+        {
+            id: incrementId++,
+            subject: "Hide done tasks"
+        },
     ],
     add: function (subject) {
         this.subjects.push(subject);
