@@ -22,7 +22,10 @@ const dataSource = {
         },
     ],
     add: function (subject) {
-        this.subjects.push(subject);
+        this.reminders.push({
+            id: incrementId++,
+            subject: subject
+        });
     }
 };
 
