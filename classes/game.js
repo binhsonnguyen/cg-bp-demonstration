@@ -1,4 +1,7 @@
 function Game() {
-    this.rows = 20;
-    this.cols = 10;
+    const _rows = 20;
+    const _cols = 10;
+
+    this.getRows = () => _rows;
+    this.getCols = () => _cols;
 }

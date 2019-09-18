@@ -6,8 +6,8 @@ function TerisPresenter(canvasId, game) {
 
     this.displayBoard = () => {
         const gameBoardCanvas = document.getElementById(_canvasId);
-        gameBoardCanvas.width = _game.cols * _pixelPerCell;
-        gameBoardCanvas.height = _game.rows * _pixelPerCell;
+        gameBoardCanvas.width = _game.getCols() * _pixelPerCell;
+        gameBoardCanvas.height = _game.getRows() * _pixelPerCell;
         gameBoardCanvas.style.backgroundColor = _backgroundColor;
     };
 }
