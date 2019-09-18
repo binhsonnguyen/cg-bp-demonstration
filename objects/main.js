@@ -78,7 +78,11 @@ function removeOne(id) {
 }
 
 function closeOne(id) {
-    console.log("closing reminder", `"${id}"`);
+    for (let reminder of dataSource.reminders) {
+        if (id === reminder.id) {
+            reminder.closed = true;
+        }
+    }
 }
 
 function renderReminder(reminder) {
