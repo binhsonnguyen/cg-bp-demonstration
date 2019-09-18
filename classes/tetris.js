@@ -1,1 +1,1 @@
-const presenter = new TerisPresenter();
+const presenter = new TerisPresenter("game-board");
