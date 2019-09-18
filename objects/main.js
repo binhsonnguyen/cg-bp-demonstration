@@ -60,7 +60,14 @@ function displayOne(subject) {
 }
 
 function removeOne(id) {
-    console.log("removing reminder", `"${id}"`);
+    let remainingReminders = [];
+    for (let reminder of dataSource.reminders) {
+        if (id !== reminder.id) {
+            remainingReminders.push(reminder);
+        }
+    }
+    dataSource.reminders = remainingReminders;
+    refreshDisplay();
 }
 
 function renderReminder(reminder) {
