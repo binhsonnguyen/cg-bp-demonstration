@@ -1,11 +1,8 @@
-function TerisPresenter(canvasId) {
+function TerisPresenter(canvasId, game) {
     const _canvasId = canvasId;
+    const _game = game;
     const _pixelPerCell = 10;
     const _backgroundColor = "darkslategray";
-    const _game = {
-        rows: 20,
-        cols: 10
-    };
 
     this.displayBoard = () => {
         const gameBoardCanvas = document.getElementById(_canvasId);
