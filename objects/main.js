@@ -7,22 +7,34 @@ const dataSource = {
         {
             id: incrementId++,
             subject: "Show main display",
-            closed: false
+            closed: false,
+            close: function () {
+                this.closed = true;
+            }
         },
         {
             id: incrementId++,
             subject: "Allow add",
-            closed: false
+            closed: false,
+            close: function () {
+                this.closed = true;
+            }
         },
         {
             id: incrementId++,
             subject: "Allow delete",
-            closed: false
+            closed: false,
+            close: function () {
+                this.closed = true;
+            }
         },
         {
             id: incrementId++,
             subject: "Hide done tasks",
-            closed: false
+            closed: false,
+            close: function () {
+                this.closed = true;
+            }
         },
     ],
     add: function (subject) {
@@ -34,7 +46,7 @@ const dataSource = {
     close: function (id) {
         let toClose = this.find(id);
         if (toClose != null) {
-            toClose.closed = true;
+            toClose.close();
         }
     },
     find: function (id) {
