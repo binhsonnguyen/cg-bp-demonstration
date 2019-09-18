@@ -34,7 +34,7 @@ function addAndDisplay() {
 
 function refreshDisplay() {
     emptyTableView();
-    for (let subject of dataSource.subjects) {
+    for (let subject of dataSource.reminders) {
         displayOne(subject);
     }
 }
@@ -60,15 +60,14 @@ function removeOne(id) {
     console.log("removing reminder", `"${id}"`);
 }
 
-function renderReminder(subject) {
-    incrementId++;
+function renderReminder(reminder) {
     return `<tr>
     <td>
         <input type='checkbox'>
     </td>
-    <td id="${incrementId}">${subject}</td>
+    <td>${reminder.subject}</td>
     <td>
-        <button onclick="removeOne(${incrementId})">Cancel</button>
+        <button onclick="removeOne(${reminder.id})">Cancel</button>
     </td>
 </tr>`;
 }
