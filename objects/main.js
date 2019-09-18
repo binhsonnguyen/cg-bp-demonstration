@@ -31,6 +31,13 @@ const dataSource = {
             subject: subject
         });
     },
+    close: function (id) {
+        for (let reminder of this.reminders) {
+            if (id === reminder.id) {
+                reminder.closed = true;
+            }
+        }
+    },
     remove: function (id) {
         let remainingReminders = [];
         for (let reminder of this.reminders) {
@@ -78,11 +85,7 @@ function removeOne(id) {
 }
 
 function closeOne(id) {
-    for (let reminder of dataSource.reminders) {
-        if (id === reminder.id) {
-            reminder.closed = true;
-        }
-    }
+    dataSource.close(id);
     refreshDisplay();
 }
 
