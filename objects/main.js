@@ -90,6 +90,7 @@ function renderReminder(reminder) {
     return `<tr>
     <td>
         <input id="${reminder.id}" 
+        ${reminder.closed ? "checked" : ""}
         oninput="closeOne(${reminder.id})"
         ${reminder.closed ? "disabled" : ""} 
         type='checkbox'>
