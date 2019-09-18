@@ -1,6 +1,8 @@
 const presenter = {
     displayBoard: function () {
-        console.log("displaying game");
+        const gameBoardCanvas = document.getElementById("game-board");
+        gameBoardCanvas.width = 100;
+        gameBoardCanvas.height = 200;
+        gameBoardCanvas.style.backgroundColor = "darkslategray";
     }
 };
-
