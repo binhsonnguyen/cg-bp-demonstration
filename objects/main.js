@@ -26,6 +26,15 @@ const dataSource = {
             id: incrementId++,
             subject: subject
         });
+    },
+    remove: function (id) {
+        let remainingReminders = [];
+        for (let reminder of this.reminders) {
+            if (id !== reminder.id) {
+                remainingReminders.push(reminder);
+            }
+        }
+        this.reminders = remainingReminders;
     }
 };
 
@@ -60,13 +69,7 @@ function displayOne(subject) {
 }
 
 function removeOne(id) {
-    let remainingReminders = [];
-    for (let reminder of dataSource.reminders) {
-        if (id !== reminder.id) {
-            remainingReminders.push(reminder);
-        }
-    }
-    dataSource.reminders = remainingReminders;
+    dataSource.remove(id);
     refreshDisplay();
 }
 
