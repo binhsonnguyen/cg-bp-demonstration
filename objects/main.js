@@ -32,9 +32,15 @@ const dataSource = {
         });
     },
     close: function (id) {
+        let toClose = this.find(id);
+        if (toClose != null) {
+            toClose.closed = true;
+        }
+    },
+    find: function (id) {
         for (let reminder of this.reminders) {
             if (id === reminder.id) {
-                reminder.closed = true;
+                return reminder;
             }
         }
     },
