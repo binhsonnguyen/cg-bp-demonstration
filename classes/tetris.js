@@ -1,3 +1,6 @@
-function displayGameBoard() {
-    console.log("displaying game");
-}
+const presenter = {
+    displayBoard: function () {
+        console.log("displaying game");
+    }
+};
+
