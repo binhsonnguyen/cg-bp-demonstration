@@ -80,9 +80,11 @@ function closeOne(id) {
 function renderReminder(reminder) {
     return `<tr>
     <td>
-        <input oninput="closeOne(${reminder.id})" type='checkbox'>
+        <input id="${reminder.id}" oninput="closeOne(${reminder.id})" type='checkbox'>
     </td>
-    <td>${reminder.subject}</td>
+    <td>
+        <label for="${reminder.id}">${reminder.subject}</label>
+    </td>
     <td>
         <button onclick="removeOne(${reminder.id})">Cancel</button>
     </td>
