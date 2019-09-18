@@ -6,19 +6,23 @@ const dataSource = {
     reminders: [
         {
             id: incrementId++,
-            subject: "Show main display"
+            subject: "Show main display",
+            closed: false
         },
         {
             id: incrementId++,
-            subject: "Allow add"
+            subject: "Allow add",
+            closed: false
         },
         {
             id: incrementId++,
-            subject: "Allow delete"
+            subject: "Allow delete",
+            closed: false
         },
         {
             id: incrementId++,
-            subject: "Hide done tasks"
+            subject: "Hide done tasks",
+            closed: false
         },
     ],
     add: function (subject) {
