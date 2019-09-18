@@ -96,7 +96,7 @@ function renderReminder(reminder) {
         type='checkbox'>
     </td>
     <td>
-        <label for="${reminder.id}">${reminder.subject}</label>
+        <label ${reminder.closed ? "style='text-decoration: line-through'" : ""} for="${reminder.id}">${reminder.subject}</label>
     </td>
     <td>
         <button onclick="removeOne(${reminder.id})">Cancel</button>
