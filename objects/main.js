@@ -1,5 +1,7 @@
 const remindersTable = document.getElementById("reminders-table");
 
+let incrementId = 0;
+
 const dataSource = {
     subjects: [
         "Show main display",
@@ -42,18 +44,19 @@ function displayOne(subject) {
     remindersTable.innerHTML += renderReminder(subject);
 }
 
-function removeOne() {
-    console.log("removing reminder");
+function removeOne(id) {
+    console.log("removing reminder", `"${id}"`);
 }
 
 function renderReminder(subject) {
+    incrementId++;
     return `<tr>
     <td>
         <input type='checkbox'>
     </td>
-    <td>${subject}</td>
+    <td id="${incrementId}">${subject}</td>
     <td>
-        <button onclick="removeOne()">Cancel</button>
+        <button onclick="removeOne(${incrementId})">Cancel</button>
     </td>
 </tr>`;
 }
