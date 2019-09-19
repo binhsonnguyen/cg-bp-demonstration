@@ -5,7 +5,7 @@ function TerisPresenter(canvasId, game) {
     const _cellRadius = _pixelPerCell / 2;
     const _backgroundColor = "darkslategray";
 
-    const _cell = new Cell("yellow", 2, 4);
+    const _cell = new Cell(2, 4);
 
     this.displayBoard = () => {
         const gameBoardCanvas = document.getElementById(_canvasId);
