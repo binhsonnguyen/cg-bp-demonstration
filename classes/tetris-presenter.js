@@ -16,7 +16,7 @@ function TerisPresenter(canvasId, game) {
         const context = gameBoardCanvas.getContext("2d");
         context.beginPath();
         context.fillStyle = "red";
-        context.arc(50, 50, 25, 0, Math.PI * 2);
+        context.arc(_pixelPerCell / 2, _pixelPerCell / 2, _pixelPerCell / 2, 0, Math.PI * 2);
         context.fill();
         context.closePath();
     };
