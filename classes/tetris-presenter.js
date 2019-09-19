@@ -2,6 +2,7 @@ function TerisPresenter(canvasId, game) {
     const _canvasId = canvasId;
     const _game = game;
     const _pixelPerCell = 10;
+    const _cellRadius = _pixelPerCell / 2;
     const _backgroundColor = "darkslategray";
 
     this.displayBoard = () => {
@@ -16,7 +17,7 @@ function TerisPresenter(canvasId, game) {
         const context = gameBoardCanvas.getContext("2d");
         context.beginPath();
         context.fillStyle = "red";
-        context.arc(2 * _pixelPerCell + _pixelPerCell / 2, 4 * _pixelPerCell + _pixelPerCell / 2, _pixelPerCell / 2, 0, Math.PI * 2);
+        context.arc(2 * _pixelPerCell + _cellRadius, 4 * _pixelPerCell + _cellRadius, _cellRadius, 0, Math.PI * 2);
         context.fill();
         context.closePath();
     };
