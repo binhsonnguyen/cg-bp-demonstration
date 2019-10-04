@@ -19,5 +19,10 @@ function TerisPresenter(canvasId, game) {
         context.arc(50, 50, 25, 0, Math.PI * 2);
         context.fill();
         context.closePath();
+    };
+
+    this.start = () => {
+        this.displayBoard();
+        this.displayCell()
     }
 }
