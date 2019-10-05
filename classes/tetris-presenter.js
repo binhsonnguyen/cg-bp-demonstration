@@ -29,9 +29,8 @@ function TerisPresenter(canvasId, game) {
     };
 
     this.start = () => {
-        console.log("displaying a game's frame");
+        _game.start();
         this.displayBoard();
         this.displayTetriminos();
-        setTimeout(this.start, 100);
     }
 }
