@@ -12,8 +12,8 @@ function TerisPresenter(canvasId, game) {
         gameBoardCanvas.style.backgroundColor = _backgroundColor;
     };
 
-    this.displayCells = () => {
-        for (let cell of _game.getCells()) {
+    this.displayTetriminos = () => {
+        for (let cell of _game.getTetriminos().getCells()) {
             this.displayCell(cell);
         }
     };
@@ -30,6 +30,6 @@ function TerisPresenter(canvasId, game) {
 
     this.start = () => {
         this.displayBoard();
-        this.displayCells();
+        this.displayTetriminos();
     }
 }
