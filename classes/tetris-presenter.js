@@ -12,10 +12,15 @@ function TerisPresenter(canvasId, game) {
         gameBoardCanvas.style.backgroundColor = _backgroundColor;
     };
 
-    this.displayCell = () => {
+    this.displayCells = () => {
+        for (let cell of _game.getCells()) {
+            this.displayCell(cell);
+        }
+    };
+
+    this.displayCell = (cell) => {
         const gameBoardCanvas = document.getElementById(_canvasId);
         const context = gameBoardCanvas.getContext("2d");
-        const cell = _game.getCell();
         context.beginPath();
         context.fillStyle = cell.getColor();
         context.arc(cell.getX() * _pixelPerCell + _cellRadius, cell.getY() * _pixelPerCell + _cellRadius, _cellRadius, 0, Math.PI * 2);
@@ -25,6 +30,6 @@ function TerisPresenter(canvasId, game) {
 
     this.start = () => {
         this.displayBoard();
-        this.displayCell()
+        this.displayCells();
     }
 }
