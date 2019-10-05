@@ -1,6 +1,5 @@
-function Cell(x, y) {
-    const _colors = ["red", "orange", "yellow", "green", "blue", "indigo", "purple"];
-    const _color = _colors[Math.floor(Math.random() * _colors.length)];
+function Cell(color, x, y) {
+    const _color = color;
     const _x = x;
     const _y = y;
 
