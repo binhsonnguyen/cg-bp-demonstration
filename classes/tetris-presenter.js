@@ -30,6 +30,15 @@ function TerisPresenter(canvasId, game) {
 
     this.start = () => {
         _game.start();
+        this.displayGameSnapshotContinuously();
+    };
+
+    this.displayGameSnapshotContinuously = () => {
+        this.displayASnapshot();
+        setTimeout(this.displayGameSnapshotContinuously, 1000 / 60);
+    };
+
+    this.displayASnapshot = () => {
         this.displayBoard();
         this.displayTetriminos();
     }
