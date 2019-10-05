@@ -35,7 +35,7 @@ function TerisPresenter(canvasId, game) {
 
     this.displayGameSnapshotContinuously = () => {
         this.displayASnapshot();
-        setTimeout(this.displayGameSnapshotContinuously, 1000 / 60);
+        window.requestAnimationFrame(this.displayGameSnapshotContinuously);
     };
 
     this.displayASnapshot = () => {
