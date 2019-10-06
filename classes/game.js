@@ -4,6 +4,12 @@ function Game() {
     const _tetriminosFactory = new TetriminosFactory(3, 0);
 
     let _tetriminos = _tetriminosFactory.createInstance();
+
+    const _cellsOnFloor = new Array(_cols);
+    for (let i = 0; i < _cellsOnFloor.length; i++) {
+        _cellsOnFloor[i] = [];
+    }
+
     const isTetriminosOnBase = () => _tetriminos.getY() === _rows;
 
     this.getRows = () => _rows;
