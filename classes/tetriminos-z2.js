@@ -1,13 +1,13 @@
-function Tetriminos(x, y) {
+function TetriminosZ2(x, y) {
     const _colors = ["red", "orange", "yellow", "green", "blue", "indigo", "purple"];
     const _color = _colors[Math.floor(Math.random() * _colors.length)];
     const _x = x;
     let _y = y;
     let _cells = [
-        new Cell(_color, _x, _y),
+        new Cell(_color, _x + 1, _y),
         new Cell(_color, _x, _y + 1),
         new Cell(_color, _x + 1, _y + 1),
-        new Cell(_color, _x + 1, _y + 2),
+        new Cell(_color, _x, _y + 2),
     ];
 
     this.getCells = () => _cells;

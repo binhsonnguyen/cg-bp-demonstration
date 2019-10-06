@@ -1,7 +1,15 @@
 function Game() {
     const _rows = 20;
     const _cols = 10;
-    const createNewTetriminos = () => new Tetriminos(3, 0);
+
+    const createNewTetriminos = () => {
+        if (Math.random() < 0.5) {
+            return new TetriminosZ1(3, 0);
+        } else {
+            return new TetriminosZ2(3, 0);
+        }
+    };
+
     let _tetriminos = createNewTetriminos();
     const isTetriminosOnBase = () => _tetriminos.getY() === _rows;
 
