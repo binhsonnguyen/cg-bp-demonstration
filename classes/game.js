@@ -9,7 +9,6 @@ function Game() {
 
     this.start = () => {
         _tetriminos.moveDown();
-        console.log(_tetriminos.getX(), _tetriminos.getY());
         setTimeout(this.start, 250);
     };
 }
