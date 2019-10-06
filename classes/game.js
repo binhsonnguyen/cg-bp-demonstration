@@ -1,16 +1,9 @@
 function Game() {
     const _rows = 20;
     const _cols = 10;
+    const _tetriminosFactory = new TetriminosFactory(3, 0);
 
-    const createNewTetriminos = () => {
-        if (Math.random() < 0.5) {
-            return new TetriminosZ1(3, 0);
-        } else {
-            return new TetriminosZ2(3, 0);
-        }
-    };
-
-    let _tetriminos = createNewTetriminos();
+    let _tetriminos = _tetriminosFactory.createInstance();
     const isTetriminosOnBase = () => _tetriminos.getY() === _rows;
 
     this.getRows = () => _rows;
@@ -19,7 +12,7 @@ function Game() {
 
     this.start = () => {
         if (isTetriminosOnBase()) {
-            _tetriminos = createNewTetriminos();
+            _tetriminos = _tetriminosFactory.createInstance(3, 0);
         } else {
             _tetriminos.moveDown();
         }
