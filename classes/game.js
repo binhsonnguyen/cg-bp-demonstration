@@ -10,7 +10,15 @@ function Game() {
         _cellsOnFloor[i] = [];
     }
 
-    const isTetriminosOnBase = () => _tetriminos.getY() === _rows;
+    const isTetriminosOnBase = () => {
+        for (let cell of _tetriminos.getCells()) {
+            const cellDistanceToFloor = _rows - 1 - cell.getY();
+            const columnCellOnFloor = _cellsOnFloor[cell.getX()];
+            if (cellDistanceToFloor <= columnCellOnFloor.length)
+                return true;
+        }
+        return false;
+    };
 
     this.getRows = () => _rows;
     this.getCols = () => _cols;
