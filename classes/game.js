@@ -1,7 +1,8 @@
 function Game() {
     const _rows = 20;
     const _cols = 10;
-    let _tetriminos = new Tetriminos(3, 0);
+    const createNewTetriminos = () => new Tetriminos(3, 0);
+    let _tetriminos = createNewTetriminos();
 
     this.getRows = () => _rows;
     this.getCols = () => _cols;
@@ -9,7 +10,7 @@ function Game() {
 
     this.start = () => {
         if (_tetriminos.getY() === _rows) {
-            _tetriminos = new Tetriminos(3, 0);
+            _tetriminos = createNewTetriminos();
         } else {
             _tetriminos.moveDown();
         }
