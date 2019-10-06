@@ -18,6 +18,14 @@ function TerisPresenter(canvasId, game) {
         }
     };
 
+    this.displayCellsOnFloor = () => {
+        for (let cellsColumn of _game.getCellsOnFloor()) {
+            for (let cell of cellsColumn) {
+                this.displayCell(cell);
+            }
+        }
+    };
+
     this.displayCell = (cell) => {
         const gameBoardCanvas = document.getElementById(_canvasId);
         const context = gameBoardCanvas.getContext("2d");
@@ -41,5 +49,6 @@ function TerisPresenter(canvasId, game) {
     this.displayASnapshot = () => {
         this.displayBoard();
         this.displayTetriminos();
+        this.displayCellsOnFloor();
     }
 }

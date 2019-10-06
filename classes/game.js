@@ -6,6 +6,8 @@ function Game() {
     let _tetriminos = _tetriminosFactory.createInstance();
 
     const _cellsOnFloor = new Array(_cols);
+    this.getCellsOnFloor = () => _cellsOnFloor;
+
     for (let i = 0; i < _cellsOnFloor.length; i++) {
         _cellsOnFloor[i] = [];
     }
