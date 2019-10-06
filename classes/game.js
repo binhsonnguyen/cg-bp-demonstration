@@ -30,7 +30,7 @@ function Game() {
         if (isTetriminosOnBase()) {
             for (let cell of _tetriminos.getCells()) {
                 const columnCellOnFloor = _cellsOnFloor[cell.getX()];
-                columnCellOnFloor.push(cell);
+                columnCellOnFloor.push(new Cell(cell.getColor(), cell.getX(), _rows - 1 - columnCellOnFloor.length));
             }
             _tetriminos = _tetriminosFactory.createInstance(3, 0);
         } else {
