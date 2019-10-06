@@ -15,11 +15,6 @@ function Tetriminos(x, y) {
     this.getY = () => _y;
     this.moveDown = () => {
         _y++;
-        _cells = [
-            new Cell(_color, _x, _y),
-            new Cell(_color, _x, _y + 1),
-            new Cell(_color, _x + 1, _y + 1),
-            new Cell(_color, _x + 1, _y + 2),
-        ];
+        for (let cell of _cells) cell.moveDown();
     }
 }
