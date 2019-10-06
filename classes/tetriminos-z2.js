@@ -1,6 +1,5 @@
-function TetriminosZ2(x, y) {
-    const _colors = ["red", "orange", "yellow", "green", "blue", "indigo", "purple"];
-    const _color = _colors[Math.floor(Math.random() * _colors.length)];
+function TetriminosZ2(color, x, y) {
+    const _color = color;
     const _x = x;
     let _y = y;
     let _cells = [
