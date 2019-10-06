@@ -8,7 +8,7 @@ function Game() {
     this.getTetriminos = () => _tetriminos;
 
     this.start = () => {
-        _tetriminos = new Tetriminos(_tetriminos.getX(), _tetriminos.getY() + 1);
+        _tetriminos.moveDown();
         console.log(_tetriminos.getX(), _tetriminos.getY());
         setTimeout(this.start, 250);
     };
